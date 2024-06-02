@@ -87,9 +87,7 @@ class Fans:
         with open('./fans.csv', 'w', newline='') as csv_file:
             csv_writer = csv.writer(csv_file)
 
-            # 写入标题行(可选)
-            if header1:
-                csv_writer.writerow(header1)
+            csv_writer.writerow(header1)
 
             # 写入排序后的数据
             csv_writer.writerows(sorted_data1)
