@@ -27,7 +27,7 @@ class Fans:
             'vmid': self.uid,
             'pn': 1
         }
-        self.exception = 1
+        self.exception = 1  # 异常代码
 
     def get_fans(self):
         try:
