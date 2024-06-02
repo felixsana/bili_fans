@@ -14,10 +14,8 @@ class Fans:
         self.uid = os.environ.get('bili_uid')
         self.fans_url = 'https://api.bilibili.com/x/relation/followers'
         self.init_url = 'https://api.bilibili.com'
-
         self.page = 1
         self.pages = 1
-
         self.sess = requests.session()    # 构建一个session
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
