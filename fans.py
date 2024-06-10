@@ -37,7 +37,7 @@ class Fans:
             json_list = self.sess.get(self.fans_url, headers=self.headers, params=self.parameter)
             self.json = json.loads(json_list.text)
             if self.json['code'] != 0:
-                self.exception = self.json['code']
+                self.exception = int(self.json['code'])
                 raise Exception(self.json['message'])
             self.total_fans = self.json['data']['total']
             self.out_fans()
@@ -51,7 +51,7 @@ class Fans:
                 }
                 json_list = self.sess.get(self.fans_url, headers=self.headers, params=self.parameter)
                 if self.json['code'] != 0:
-                    self.exception = self.json['code']
+                    self.exception = int(self.json['code'])
                     raise Exception(self.json['message'])
                 self.json = json.loads(json_list.text)
                 self.out_fans()
